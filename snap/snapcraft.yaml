@@ -1,4 +1,4 @@
-name: mpv-kiosk
+name: mpv-kiosk-2022
 base: core18 
 version: '0.1' 
 summary: Loop videos on a kiosk
