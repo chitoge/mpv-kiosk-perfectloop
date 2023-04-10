@@ -1,6 +1,6 @@
 name: mpv-kiosk-2022
 base: core18 
-version: '0.1' 
+version: '0.2' 
 summary: Loop videos on a kiosk
 description: |
   Create a kiosk with this snap to loop a set of videos. 
@@ -52,7 +52,7 @@ plugs:
    
 apps:
   mpv:
-    command: run-daemon wayland-launch $SNAP/usr/bin/mpv --vo opengl $SNAP_COMMON/ $(find /media/ -maxdepth 1 -mindepth 1)
+    command: run-daemon wayland-launch $SNAP/usr/bin/mpv --vo opengl --loop-file=inf $SNAP_COMMON/ $(find /media/ -maxdepth 1 -mindepth 1)
     daemon: simple
     restart-condition: always
     environment:
